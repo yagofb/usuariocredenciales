@@ -50,4 +50,16 @@ class UsuarioTest {
 	       assertTrue(resultado, "El login tendria que ser exitoso con las credenciales correctas.");
 	   }
 	
+	   @Test
+	   void testLoginFallaContraseñaIncorrecta() {
+	       Usuario usuario = new Usuario("Paco", "chocolatero", "1234567A");
+
+	       boolean resultado = usuario.hacerLogin("Paco chocolatero", "ContraseñaIncorrecta");
+
+	       assertFalse(resultado, "El login no debería ser posible porque es una contraseña incorrecta.");
+	   }
+	   
+	   
+	   
+	   
 }
