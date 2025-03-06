@@ -21,12 +21,26 @@ class UsuarioTest {
 	
 	@Test
 	void testCreacionUsuarioConEmail() {
-	    Usuario usuario = new Usuario("Ana", "Gomez", "ana@example.com", "987654");
+	    Usuario usuario = new Usuario("Paco", "Martinez", "Paco@example.com", "987654");
 
 	    assertNotNull(usuario);
 	    assertEquals("Paco", usuario.getNombre());
 	    assertEquals("Martinez", usuario.getApellidos());
 	    assertEquals("Paco@example.com", usuario.getEmail());
 	}
+	
+	
+	
+
+	   @Test
+	   void testCreacionUsuarioSinEmail() {
+	        Usuario usuario = new Usuario("Paco", "chocolatero", "1234567A");
+
+	        assertNotNull(usuario);
+	        assertEquals("Paco", usuario.getNombre());
+	        assertEquals("chocolatero", usuario.getApellidos());
+	    }
+	
+	
 	
 }
