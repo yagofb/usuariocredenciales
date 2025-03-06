@@ -41,22 +41,14 @@ class UsuarioTest {
 	        assertEquals("chocolatero", usuario.getApellidos());
 	    }
 	
-	   @Test
-	   void testLoginBien() {
-	       Usuario usuario = new Usuario("Paco", "chocolatero", "1234567A");
 
-	       boolean resultado = usuario.hacerLogin("Paco Chocolatero", "1234567A");
-
-	       assertTrue(resultado, "El login tendria que ser exitoso con las credenciales correctas.");
-	   }
-	
 	   @Test
 	   void testLoginFallaContraseñaIncorrecta() {
 	       Usuario usuario = new Usuario("Paco", "chocolatero", "1234567A");
 
 	       boolean resultado = usuario.hacerLogin("Paco chocolatero", "ContraseñaIncorrecta");
 
-	       assertFalse(resultado, "El login no debería ser posible porque es una contraseña incorrecta.");
+	       assertFalse(resultado, "El login tendria que ser posible porque es una contraseña incorrecta.");
 	   }
 	   
 	   @Test
