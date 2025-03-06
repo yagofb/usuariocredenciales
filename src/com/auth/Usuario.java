@@ -52,4 +52,21 @@ public class Usuario {
 		return "Usuari@: " + this.nombre + " " + this.apellidos + " con email=" + this.email + ", " + this.credencial.toString();
 	}
 	
+	
+	public String getNombre() {
+	    return nombre;
+	}
+
+	public String getApellidos() {
+	    return apellidos;
+	}
+
+	public String getEmail() {
+	    return email;
+	}
+	
+	
+	
+	
+	
 }

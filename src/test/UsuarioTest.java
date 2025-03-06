@@ -18,4 +18,15 @@ class UsuarioTest {
 		assertFalse(paco.modificarPassword("Hola4321", "Hola4321", "Hola4321", "Hola4321"));
 	}
 
+	
+	@Test
+	void testCreacionUsuarioConEmail() {
+	    Usuario usuario = new Usuario("Ana", "Gomez", "ana@example.com", "987654");
+
+	    assertNotNull(usuario);
+	    assertEquals("Paco", usuario.getNombre());
+	    assertEquals("Martinez", usuario.getApellidos());
+	    assertEquals("Paco@example.com", usuario.getEmail());
+	}
+	
 }
