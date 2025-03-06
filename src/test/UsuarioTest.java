@@ -59,6 +59,16 @@ class UsuarioTest {
 	       assertFalse(resultado, "El login no debería ser posible porque es una contraseña incorrecta.");
 	   }
 	   
+	   @Test
+	   void testCuentaBloqueadaTresIntentosFallidos() {
+	       Usuario usuario = new Usuario("Paco", "chocolatero", "1234567A");
+
+	       usuario.hacerLogin("Paco chocolatero Perro", "Incorrecta1");
+	       usuario.hacerLogin("Paco chocolatero", "Incorrecta2");
+	       usuario.hacerLogin("Paco chocolatero", "Incorrecta3");
+
+	       assertTrue(usuario.esCuentaBloqueada(), "La cuenta tendria que bloquearse tras tres intentos fallidos.");
+	   }
 	   
 	   
 	   
